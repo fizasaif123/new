@@ -1,0 +1,70 @@
+.cta-link-section{
+    text-align: center;
+    background-color: $white;
+    padding: 80px 0 50px;
+    @include media(">=tablet") {
+        padding: 80px 0;
+    }
+    &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 8px;
+        background-color: #eeeeee;
+        max-width: 219px;
+        width: 100%;
+        margin-top: 35px;
+        @include media(">=tablet") {
+            height: 11px;
+            max-width: 350px;
+        }
+    }
+    .cta-link-title{
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: -2px;
+        color: #005a60;
+        margin-bottom: 11px;
+        @include media(">=tablet") {
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+    }
+    .cta-link{
+        display: block;
+        @include media(">=tablet") {
+            display: inline-block;
+            margin-left: 16px;
+        }
+        a{
+            @extend %transition;
+            font-size: 28px;
+            color: #005a60;
+            font-weight: 600;
+            letter-spacing: -2px;
+            position: relative;
+            @include media(">=tablet") {
+                font-size: 40px;
+            }
+            &:after{
+                @extend %transition;
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                height: 2px;
+                background-color: #005a60;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            &:hover{
+                color: $cyan;
+                &:after{
+                    background-color: $cyan;
+                }
+            }
+        }
+    }   
+}

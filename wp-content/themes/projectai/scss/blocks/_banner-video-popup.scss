@@ -1,0 +1,96 @@
+.banner-video-popup{
+    min-height: 659px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
+    position: relative;
+    background-attachment: fixed;
+    @include media(">=tablet") {
+        min-height: 721px;
+    }
+    .container{
+        max-width: 700px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+    .holder-bg-video-popup{
+        overflow: hidden;
+        position: absolute !important;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1 !important;
+        .bg-video{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 35px;
+        letter-spacing: -2.14px;
+        margin-bottom: 17px;
+        @include media(">=tablet") {
+            font-size: 50px;
+            line-height: 70.06px;
+            letter-spacing: -2.5px;
+            margin-bottom: 40px;
+        }
+    }
+    .cta-banner-text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        @include media(">=tablet") {
+            font-size: 20px;
+            line-height: 30.03px;
+        }
+        p{
+            margin-bottom: 21px;
+            @include media(">=tablet") {
+                margin-bottom: 26px;
+            }
+        }
+    }
+    .link{
+        a{
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            color: $white;
+            @include media(">=tablet") {
+                font-size: 20px;
+            }
+            &:after{
+                @extend %transition;
+                content: '';
+                display: block;
+                height: 1px;
+                background-color: $white;
+            }
+            &:hover{
+                color: $cyan;
+                &:after{
+                    background-color: $cyan;
+                }
+            }
+        }
+    }
+
+}

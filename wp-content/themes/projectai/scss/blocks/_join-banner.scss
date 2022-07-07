@@ -1,0 +1,89 @@
+.join-banner{
+    min-height: 650px;
+    padding: 20px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    @include media(">=tablet") {
+        min-height: 600px;
+    }
+    .holder-join-banner{
+        overflow: hidden;
+        position: absolute !important;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1 !important;
+    }
+    .text-holder{
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+        max-width: 753px;
+        margin: 0 auto;
+        @include media(">=tablet") {
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .join-banner-subtitle{
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            @include media(">=tablet") {
+                font-size: 18px;
+                margin-bottom: 26px;
+            }
+        }
+        .join-banner-title{
+            color: $white;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.6px;
+            margin-bottom: 16px;
+            line-height: 30px;
+            @include media(">=tablet") {
+                font-size: 30px;
+                margin-bottom: 34px;
+                line-height: 40px;
+            }
+        }
+        .join-banner-text{
+            max-width: 525px;
+            margin:  0 auto 22px;
+            @include media(">=tablet") {
+                margin:  0 auto 50px;
+            }
+        }
+        .join-banner-link{
+            a{
+                @extend %transition;
+                font-size: 14px;
+                font-weight: 400;
+                border: 2px solid $white;
+                padding: 9px 12px;
+                min-width: 157px;
+                color: $white;
+                font-weight: 400;
+                display: inline-block;
+                @include media(">=tablet") {
+                    font-size: 18px;
+                    min-width: 223px;
+                    padding: 13px;
+                }
+                &:hover{
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

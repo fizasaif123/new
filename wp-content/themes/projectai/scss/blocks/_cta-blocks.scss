@@ -1,0 +1,125 @@
+.cta-blocks {
+    padding: 72px 0 33px;
+	position: relative;
+	z-index: 2;
+	@include media(">=tablet") {
+		padding: 102px 0 30px;
+	}
+	.container {
+		@include media (">=tablet") {
+			max-width: 1710px;
+		}
+	}
+	&:before{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		bottom: -33px;
+		transform: translate(-50%, 0%);
+		background: #8acbc1;
+		height: 121px;
+		width: 2px;
+		z-index: -1;
+		@include media(">=tablet") {
+			bottom: -149px;
+			height: 220px;
+		}
+	}
+}
+
+.cta-blocks-text {
+	color: $blue-100;
+	font-size: 25px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 79px;
+	line-height: 35px;
+	@include media (">=tablet") {
+		max-width: 1030px;
+		margin: 0 auto;
+		font-size: 40px;
+		line-height: 3.125rem;
+		margin-bottom: 82px;
+	}
+}
+
+.cta-blocks-list {
+	@extend %listreset;
+	margin: 0 -15px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	@include media (">=desktop") {
+		max-width: none;
+		margin: 0 -15px 0px;
+	}
+	li {
+		width: 100%;
+		margin-bottom: 8px;
+		@include media(">=tablet") {
+			padding: 0 15px;
+		}
+		@include media(">=desktop") {
+			width: 33.33%;
+			margin-bottom: 30px;
+		}
+	}
+	.cta-block {
+		text-align: center;
+		color: $white;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		padding: 50px 20px;
+		min-height: 352px;
+		background-color: #72787a;
+		@include media(">=tablet") {
+			padding: 70px 20px;
+			min-height: 505px;
+		}
+
+	}
+	h3.cta-block-title {
+		font-size: 35px;
+		font-weight: 900;
+		margin-bottom: 13px;
+		@include media(">=desktop") {
+			font-size: 30px;
+		}
+		@include media (">=1500px") {
+			font-size: 50px;
+			margin-bottom: 17px;
+		}
+	}
+	.cta-block-text {
+		font-size: 21px;
+		font-weight: 500;
+		margin-bottom: 43px;
+		@include media(">=tablet") {
+			font-size: 30px;
+			font-weight: 500;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.cta-block-link {
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: uppercase;
+	@include media(">=tablet") {
+		font-size: 18px;
+	}
+	.btn{
+		padding: 12px 24px;
+		@include media(">=tablet") {
+			padding: 20px 39px;
+		}
+	}
+}

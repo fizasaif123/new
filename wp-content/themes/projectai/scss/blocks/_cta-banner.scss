@@ -1,0 +1,96 @@
+.cta-banner {
+	position: relative;
+	min-height: 536px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding: 30px 0;
+	@include media (">=tablet") {
+		min-height: 767px;
+		overflow: hidden;
+		padding: 90px 0;
+	}
+	&:before{
+		content: '';
+		background-color: rgba(#333333, 0.5);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.holder-content{
+		position: relative;
+		z-index: 1;
+	}
+	.text-holder {
+		text-align: center;
+		color: $white;
+		font-size: 14px;
+		line-height: 21px;
+		padding: 66px 0 50px 0;
+		@include media (">=tablet") {
+			padding: 116px 0 30px 0;
+			font-size: 20px;
+			line-height: 1.875rem;
+		}
+	}
+	.cta-banner-title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 35px;
+		margin-bottom: 11px;
+		@include media (">=tablet") {
+			font-size: 50px;
+			letter-spacing: -0.1563rem;
+			line-height: 4.375rem;
+			max-width: 870px;
+			margin: 0 auto 36px auto;
+		}
+	}
+	.cta-banner-text {
+		max-width: 770px;
+		margin: 0 auto 20px;
+		@include media(">=tablet") {
+			margin: 0 auto 26px;
+		}
+	}
+	.cta-banner-link {
+		a {
+			text-decoration: underline;
+			color: $white;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: underline;
+			@include media(">=tablet") {
+				font-size: 20px;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&.parallaxbg-image{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	&.parallaxbg-video{
+		.holder-content{
+			width: 100%;
+		}
+		.cta-banner-video{
+			overflow: hidden;
+			position: absolute !important;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 0 !important;
+		}
+	}
+}

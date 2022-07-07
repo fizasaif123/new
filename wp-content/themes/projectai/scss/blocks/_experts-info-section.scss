@@ -1,0 +1,241 @@
+.experts-info-section{
+    padding: 35px 0;
+    @include media(">=tablet") {
+        padding: 55px 0;
+    }
+    .container{
+        max-width: 1046px;
+    }
+    .experts-section-title{
+        text-align: center;
+        margin-bottom: 45px;
+        color: $gray-300;
+        font-size: 21px;
+        letter-spacing: 3.3px;
+        text-transform: uppercase;
+        @include media(">=tablet") {
+            font-size: 30px;
+            margin-bottom: 52px;
+        }
+    }
+    .holder-img{
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        @include media(">=tablet") {
+            width: calc(38% - 40px);
+            margin: 0;
+            margin-left: 40px;
+            max-width: 100%;
+        }
+    }
+    .holder-text{
+        width: 100%;
+        color: #222222;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        max-width:270px;
+        margin: 0px auto 30px;
+        order: -1;
+        @include media(">=phone") {
+            max-width:100%;
+        }
+        @include media(">=tablet") {
+            order: 0;
+            width: 62%; 
+            text-align: left;
+            margin: 66px auto;
+            max-width: 100%;
+        }
+        .expert-info-title{
+            font-size: 20px;
+            font-weight: 700;
+            color: $green;
+            margin-bottom: 11px;
+            @include media(">=tablet") {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+        }
+        .expert-full-position{
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 11px;
+            @include media(">=tablet") {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+        .expert-info-text{
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 21px;
+            @include media(">=tablet") {
+                font-size: 18px;
+                line-height: 30px;
+                margin-bottom: 33px;
+            }
+        }
+        .expert-info-links{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media(">=tablet") {
+                justify-content: flex-start;
+            }
+            .expert-talk-link{
+                .btn-expert-talk{
+                    font-size: 13px;
+                    color: $green;
+                    font-weight: 700;
+                    text-decoration: none;
+                    @include media(">=tablet") {
+                        font-size: 18px;
+                    }
+                    &:hover{
+                        color: #8acbc1;
+                    }
+                    &:before{
+                        content: '\f054';
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: 300;
+                        font-size: 13px;
+                        margin-right: 10px;
+                        @include media(">=tablet") {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .expert-socials{
+                ul{
+                    @extend %listreset;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        &:before{
+                            content: '';
+                            margin: 0 14px;
+                            display: inline-block;
+                            background-color:#666666;
+                            width: 2px;
+                            height: 12px;
+                            @include media(">=tablet") {
+                                margin: 0 23px;
+                                height: 17px;
+                            }
+                        }
+                        a{
+                            color: $green;
+                            font-size: 19px;
+                            @include media(">=tablet") {
+                                font-size: 24px;
+                            }
+                            &:hover{
+                                color: #8acbc1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.expert-info-image{
+    max-width: 277px;
+    margin: 0 auto;
+    @include media(">=tablet") {
+        max-width: 100%;
+    }
+}
+
+
+.expert-info-image,
+.info-card-image .holder-img{
+    position: relative;
+    &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $green;
+        height: 44px;
+        width: 91%;
+        position: absolute;
+        left: -17px;
+        bottom: -25px;
+        z-index: -1;
+        @include media(">=tablet") {
+            height: 60px;
+            width: 100%;
+            left: -30px;
+            bottom: -30px;
+        }
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.expert-info{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 53px;
+    position: relative;
+    padding-bottom: 60px;
+    @include media(">=tablet") {
+        padding-bottom: 0px;
+    }
+    &:before{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $gray-700;
+        height: 8px;
+        width: 100%;
+        max-width: 457px;
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+        left: -68px;
+        @include media(">=tablet") {
+            height: 10px;
+            left: -109px;
+        }
+    }
+    &:last-child{
+        margin: 0 0px 0px;
+        &:before{
+            display: none;
+        }
+    }
+    &:nth-child(2n){
+        .holder-text{
+            width: 100%;
+            @include media(">=tablet") {
+                width: 56%;
+            }
+        }
+        .holder-img{
+            order:-1;
+            margin-left: 0px;
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            @include media(">=tablet") {
+                width: calc(44% - 98px);
+                max-width: 100%;
+                margin: 0;
+                margin-right: 98px;
+            }
+        }
+        .expert-info-image{
+            &:after{
+                left: auto;
+                right: -30px;
+            }
+        }
+    }
+}

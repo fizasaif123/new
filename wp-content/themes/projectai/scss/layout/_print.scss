@@ -1,0 +1,23 @@
+// page-break-inside: avoid; --> to disable block transfering to next page
+
+// -webkit-print-color-adjust: exact; 
+// print-color-adjust: exact; --> to show bg on print version
+
+@media print {
+	body {
+    background: $white;
+		color: $black;
+		overflow: visible;
+	}
+	* {
+    color: $black !important;
+    background:none !important;
+  }
+  .search-form,
+	.navigation,
+	.navigation-single,
+	#header,
+	#footer {
+		display: none !important;
+	}
+}

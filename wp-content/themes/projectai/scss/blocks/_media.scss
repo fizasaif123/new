@@ -1,0 +1,136 @@
+.media-section{
+    padding: 110px 0 60px;
+    background-color: $gray-700;
+    @include media(">=tablet") {
+        padding: 120px 0 60px;
+    }
+    .holder-media{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include media(">=tablet") {
+            flex-wrap: nowrap;
+        }
+    }
+    .col{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 49px;
+        @include media(">=tablet") {
+            text-align: left;
+            max-width: 315px;
+            margin-bottom: 0;
+            margin-right: 68px;
+        }
+        .media-title{
+            color: $gray-300;
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            @include media(">=tablet") {
+                font-size: 20px;
+                font-weight: 900;
+                line-height: 30px;
+                margin-bottom: 26px;
+            }
+        }
+        .media-text{
+            color: $black;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 30px;
+            @include media(">=tablet") {
+                font-size: 25px;
+                line-height: 40px;
+            }
+            p{
+                margin-bottom: 15px;
+                @include media(">=tablet") {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .media-download{
+            .download-link{
+                @extend %transition;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 28px;
+                color: $green;
+                text-transform: uppercase;
+                @include media(">=tablet") {
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+                &:hover{
+                    color: $cyan;
+                }
+                &:before{
+                    content: '\f054';
+                    display: inline-block;
+                    vertical-align: top;
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    @include media(">=tablet") {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.media,
+.media-section{
+    .media-image{
+        position: relative;
+        .media-poster{
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .video-link{
+            @extend %position-center;
+            z-index: 1;
+            font-size: 0;
+            color: $white;
+            &::before{
+                content: '\f04b';
+                display: inline-block;
+                vertical-align: top;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 700;
+                font-size: 14px;
+                margin-right: 10px;
+                color: inherit;
+                margin-bottom: 5px;
+                @include media(">=tablet") {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+            &:after{
+                @extend %transition;
+                content: '';
+                display: block;
+                height: 1px;
+                width: 11px;
+                background-color: #ffffff;
+                @include media(">=tablet") {
+                    height: 3px;
+                    width: 26px;
+                }
+            }
+            &:hover{
+                color: $cyan;
+                &:after{
+                    background-color: $cyan;
+                }
+            }
+        }
+    }
+}

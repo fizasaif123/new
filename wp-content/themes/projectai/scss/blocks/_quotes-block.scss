@@ -1,0 +1,107 @@
+.quote-block {
+	text-align: center;
+	margin-bottom: 0px;
+	@include media(">=tablet") {
+		margin-bottom: 40px;
+	}
+	.quote-title {
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 3.14px;
+		margin-bottom: 40px;
+		@include media(">=tablet") {
+			font-size: 30px;
+			letter-spacing: 0.2062rem;
+		}
+	}
+	.text-holder {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 2.3rem;
+		color: $blue-100;
+		margin-bottom: 31px;
+		@include media (">=tablet") {
+			max-width: 1000px;
+			margin: 0 auto 33px;
+			font-size: 40px;
+			line-height: 3.75rem;
+			margin-bottom: 40px;
+		}
+		&:before{
+			content: '‘';
+			font-family: 'Arial', sans-serif;
+		}
+		&::after{
+			content: '’';
+			font-family: 'Arial', sans-serif;
+		}
+	}
+	.quote-name {
+		display: block;
+		font-weight: 600;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+		margin-bottom: 2px;
+		@include media(">=tablet") {
+			margin-bottom: 9px;
+		}
+	}
+	.quote-position {
+		display: block;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.075rem;
+		margin-bottom: 26px;
+	}
+	.quote-image {
+		max-width: 246px;
+		margin: 0 auto;
+		display: block;
+		@include media(">=tablet") {
+			max-width: 350px;
+		}
+	}
+}
+
+.quotes{
+	margin-bottom: 55px;
+	@include media(">=tablet") {
+		margin-bottom: 59px;
+	}
+	h2,
+	.quote-title{
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		color: #333333;
+		letter-spacing: 3.3px;
+		margin-bottom: 34px;
+		text-transform: uppercase;
+		@include media(">=tablet") {
+			font-size: 30px;
+			margin-bottom: 43px;
+		}
+	}
+	&::after{
+		content: '';
+		display: block;
+		max-width: 246px;
+		background-color: #eeeeee;
+		height: 8px;
+		margin: 49px auto 0;
+		@include media(">=tablet") {
+			max-width: 350px;
+			height: 11px;
+		}
+	}
+}
+.page-template-template-home{
+	.quotes{
+		padding: 62px 0 0;
+		@include media(">=tablet") {
+			padding:130px 0 0;
+		}
+	}
+}

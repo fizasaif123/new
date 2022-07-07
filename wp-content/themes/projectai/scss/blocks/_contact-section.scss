@@ -1,0 +1,315 @@
+.contact-section{
+    .contact-holder{
+        position: relative;
+        display: flex;
+        color: #2f3f92;
+        align-items: flex-end;
+        &:before{
+            position: absolute;
+            left: -20px;
+            right: -20px;
+            bottom: 3px;
+            content: '';
+            display: block;
+            width: 100vh;
+            height: 8px;
+            background-color: $gray-700;
+            @include media(">=tablet") {
+                width: 100%;
+                left: 0;
+                right: 0;
+                height: 11px;
+            }
+        }
+        .contact-content{
+            width: 70%;
+            padding-bottom: 40px;
+            @include media(">=370px") {
+                margin-right: -17px;
+                margin-left: 16px;
+            }
+            @include media(">=tablet") {
+                margin-left: 90px;
+                padding-bottom: 80px;
+            }
+            .contact-title{
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 35px;
+                margin-bottom: 19px;
+                @include media(">=tablet") {
+                    line-height: 49.98px;
+                    font-size: 40px;
+                }
+            }
+            .contact-links{
+                @extend %listreset;
+                display: flex;
+                li{
+                    a{
+                        color: #2f3f92;
+                        letter-spacing: -0.4px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        @include media(">=tablet") {
+                            font-size: 20px;
+                        }
+                        &:hover{
+                            color: $cyan;
+                        }
+                    }
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        vertical-align: text-top;
+                        height: 18px;
+                        width: 2px;
+                        margin: 0 10px;
+                        background-color: #002432;
+                        @include media(">=tablet") {
+                            margin: 0 23px;
+                        }
+                    }
+                    &:first-child{
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-image{
+            width: 30%;
+            position: relative;
+            z-index: 1;
+            min-width: 140px;
+            margin-right: -17px;
+            @include media(">=370px") {
+                min-width: 171px;
+            }
+            @include media(">=tablet") {
+                min-width: 277px;
+                margin-right: 93px;
+            }
+        }
+    }
+    .contact-form{
+        display: none;
+    }
+}
+.contact-form,
+.dp-form,
+.jf-form{
+    position: relative;
+    background-color: $white;
+    padding: 16px 16px 38px 16px;
+    @include media(">=tablet") {
+        padding: 28px 28px 38px 28px;
+        background-color: $gray-700;
+    }
+    .contact-form-close{
+        @extend %transition;
+        position: absolute;
+        top: 18px;
+        right: 4%;
+        width: 11px;
+        height: 11px;
+        cursor: pointer;
+        @include media(">=tablet") {
+            top: 33px;
+            right: 10.6%;
+            width: 20px;
+            height: 20px;
+        }
+        path{
+            @extend %transition;
+        }
+        &:hover{
+            path{
+                fill:$cyan;
+            }
+        }
+    }
+    .wpcf7,
+    .wpcf7-form{
+        max-width: 733px;
+        margin: 0 auto;
+        h5{
+            text-align: center;
+            color: #2f3f92;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0 auto 24px;
+            @include media(">=tablet") {
+                font-size: 30px;
+                line-height: 39.98px;
+                margin: 0 auto 13px;
+                max-width: 525px;
+            }
+        }
+        .text{
+            text-align: center;
+            color: #303c42;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-bottom: 27px;
+            @include media(">=tablet") {
+                font-size: 18px;
+                line-height: 29.99px;
+                margin-bottom: 34px;
+            }
+        }
+        .double-inputs{
+            @include media(">=tablet") {
+                display: flex;
+                margin: 0 -16px;
+            }
+            label{
+                @include media(">=tablet") {
+                    padding: 0 16px;
+                    width: 50%;
+                }
+            }
+        }
+        label{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.99px;
+            color: #303c42;
+            display: block;
+            margin-bottom: 12px;
+            @include media(">=tablet") {
+                font-size: 18px;
+                margin-bottom: 28px;
+            }
+        }
+        .wpcf7-checkbox{
+            display: block;
+            margin-bottom: 17px;
+            @include media(">=tablet") {
+                text-align: center;
+            }
+            span{
+                margin-left: 0;
+            }
+        }
+        input,
+        textarea{
+            border: 1px solid #dee2e4;
+            background-color: #ffffff;
+            width: 100%;
+            margin-top: 10px;
+            padding: 9px 19px;
+            font-size: 16px;
+        }
+        textarea{
+            max-height: 81px;
+            resize: none;
+            @include media(">=tablet") {
+                max-height: 89px;
+            }
+        }
+        input[type="checkbox"],
+        input[type="submit"]{
+            width: auto;
+        }
+        input[type="submit"]{
+            @extend %transition;
+            display: block;
+            margin:  0 auto;
+            background-color: $blue-300;
+            color: $white;
+            font-size: 20px;
+            font-weight: 400;
+            min-width: 161px;
+            padding: 8px 19px;
+            width: 100%;
+            @include media(">=tablet") {
+                padding: 12px 19px;
+                min-width: 161px;
+                width: auto;
+                font-size: 25px;
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        input[type="checkbox"]{
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0;
+            cursor: pointer;
+            @include media(">=tablet") {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+.wpcf7-checkbox{
+    label{
+        input[type="checkbox"]{
+            position: absolute;
+            left: -99999;
+            z-index: -9999;
+            visibility: hidden;
+        }
+        input[type="checkbox"]:checked + .wpcf7-list-item-label:after{
+            position: absolute;
+            left: 4px;
+            top: 5px;
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 2px;
+            border-top: 2px solid $white;
+            border-right: 2px solid $white;
+            transform: rotate(133deg);
+            width: 14px;
+            height: 7px;
+            @include media(">=tablet") {
+                left: 6px;
+                top: 6px;
+                width: 22px;
+                height: 10px;
+            }
+        }
+        input[type="checkbox"]:checked + .wpcf7-list-item-label:before{
+            background-color: #2f3f92;
+            border-color: #2f3f92;
+        }
+        .wpcf7-list-item-label{
+            font-size: 13px;
+            position: relative;
+            display: flex;
+            @include media(">=550px") {
+                align-items: center;
+            }
+            &:before{
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 2px;
+                border: 1px solid #c2c2c2;
+                height: 20px;
+                width: 20px;
+                min-width: 20px;
+                background-color: $white;
+                margin-right: 9px;
+                @include media(">=tablet") {
+                    height: 30px;
+                    width: 30px;
+                    min-width: 30px;
+                }
+            }
+            @include media(">=tablet") {
+                font-size: 16px;
+            }
+        }
+    }
+}

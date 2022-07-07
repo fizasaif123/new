@@ -1,0 +1,206 @@
+.footer {
+	overflow: hidden;
+	.container {
+		padding-bottom: 33px;
+		margin-bottom: 50px;
+		margin-top: 90px;
+		position: relative;
+		@include media (">=tablet") {
+			display: flex;
+			margin-bottom: 90px;
+			flex-wrap: wrap;
+			margin-top: 116px;
+			justify-content: space-between;
+		}
+		@include media (">=desktop") {
+			justify-content: space-between;
+			max-width: 1650px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100vw;
+			height: 9px;
+			left: 0;
+			right: 0;
+			background: $green;
+			@include media(">=tablet") {
+				width: calc(100% - 30px);
+				left: auto;
+				right: auto;
+			}
+		}
+	}
+}
+
+.footer-info {
+	@include media (">=tablet") {
+		width: 15%;
+		min-width: 235px;
+	}
+}
+
+.footer-logo {
+	width: 151px;
+    margin-bottom: 23px;
+	@include media(">=tablet") {
+		width: 215px;
+		margin-bottom: 36px;
+	}
+}
+
+.footer-navigation {
+	@extend %listreset;
+	@include media (">=tablet") {
+		display: flex;
+		flex-wrap: wrap;
+		width: 65%;
+		margin: 20px -15px 0 -15px;
+	}
+	@include media(">=desktop") {
+		width: 57%;
+	}
+	@include media(">=1600px") {
+		margin: 20px -22px 0 -22px;
+	}
+	>li {
+		margin-bottom: 20px;
+		
+		@include media (">=tablet") {
+			padding: 0 15px;
+			width: 33.33%;
+		}
+		@include media (">=widescreen") {
+			width: 16.66%;
+		}
+		@include media(">=1600px") {
+			padding: 0 22px;
+		}
+		a {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 11px;
+			display: inline-block;
+			color: $gray-300;
+			@include media(">=1500px") {
+				font-size: 18px;
+				font-weight: 600;
+			}
+			&:hover {
+				color: $violet;
+			}
+		}
+	}
+	.drop-holder {
+		ul {
+			@extend %listreset;
+			>li {
+				a {
+					font-size: 12px;
+					font-weight: 400;
+					margin-bottom: 6px;
+					display: block;
+					@include media(">=1500px") {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-subscribe {
+	padding-top: 20px;
+	width: 100%;
+	margin-bottom: 40px;
+	@include media (">=desktop") {
+		padding-left: 20px;
+		// width: calc(25.5% + 20px);
+		width: 23%;
+		margin-bottom: 0;
+	}
+	.subscribe-title {
+		font-size: 16px;
+		font-weight: 600;
+		@include media(">=1200px") {
+			margin-bottom: 55px;
+		}
+		@include media(">=1500px") {
+			font-size: 18px;
+		}
+	}
+	.mc4wp-form-fields{
+		position: relative;
+	}
+	.mc4wp-form{
+		input[type="email"]{
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+			color: #a1a1a1;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 20px;
+			outline: none;
+			padding: 0 30px 13px 0;
+			@include media(">=tablet") {
+				font-size: 14px;
+				padding: 0 30px 25px 0;
+			}
+		}
+		.holder-btn{
+			position: absolute;
+			right: 0;
+			top: 0;
+			&:hover:before{
+				color: $cyan;
+			}
+			input[type="submit"]{
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border: none;
+				background-color: transparent;
+				font-size: 0;
+				width: 100%;
+				outline: none;
+			}
+			&::before{
+				@extend %transition;
+				content: '\f061';
+				display: inline-block;
+				vertical-align: middle;
+				font-family: "Font Awesome 5 Free";
+				font-size: 19px;
+				font-weight: 700;
+				color: #909090;
+				&:hover{
+					color: $cyan;
+				}
+			}
+		}
+	}
+}
+
+.footer-bottom{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include media(">=desktop") {
+		display: block;
+	}
+	.copyright {
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 30px;
+		color: $gray-400;
+		margin-bottom: 0;
+		@include media(">=desktop") {
+			font-size: 14px;
+		}
+	}
+}

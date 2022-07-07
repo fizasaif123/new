@@ -1,0 +1,115 @@
+.latest-posts{
+    padding: 0px 0 38px;
+    @include media(">=tablet") {
+        padding: 90px 0 60px;
+    }
+    .container{
+        max-width: 1715px;
+    }
+    .title{
+        letter-spacing: 3.3px;
+        color: $black;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 58px;
+        @include media(">=tablet") {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+    }   
+}
+.posts-list{
+    display: flex;
+    flex-wrap: wrap;
+    @include media(">=tablet") {
+        margin: 0 -15px;
+    }
+    @include media(">=desktop") {
+        margin: 0 -32.5px;
+    }
+    .status-publish{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        @include media(">=tablet") {
+            width: 33.33%;
+            padding: 0 15px;
+            margin-bottom: 30зч;
+        }
+        @include media(">=desktop") {
+            padding: 0 32.5px;
+        }
+        &:after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #cccccc;
+            width: 100%;
+        }
+        .content{
+            img{
+                display: block;
+                width: 100%;
+            }
+            a{
+                @extend %transition;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 26px;
+                color: #002432;
+                display: block;
+                margin-bottom: 15px;
+                @include media(">=desktop") {
+                    font-size: 25px;
+                    font-weight: 300;
+                    line-height: 40px;
+                }
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            h2{
+                margin-bottom: 0px;
+                margin-left: 12px;
+                @include media(">=tablet") {
+                    margin-left: 0px;
+                }
+                a{
+                    margin-bottom: 11px;
+                    &:hover{
+                        opacity: 1;
+                        color: $cyan;
+                    }
+                }
+            }
+        }
+    }
+    .post-category{
+        margin-bottom: 2px;
+        margin-top: auto;
+        margin-left: 12px;
+        @include media(">=tablet") {
+            margin-left: 0px;
+            margin-bottom: 9px;
+        }
+        a{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $black;
+            text-transform: uppercase;
+            @include media(">=desktop") {
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 700;
+            }
+            &:hover{
+                color: $cyan;
+            }
+        }
+    }
+}

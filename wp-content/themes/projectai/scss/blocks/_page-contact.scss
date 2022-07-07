@@ -1,0 +1,397 @@
+.contact-form-section{
+    padding: 100px 0 45px;
+    .container{
+        padding: 0 20px;
+        @include media(">=tablet") {
+            padding:0 15px;
+        }
+        &:after{
+            content: '';
+            display: block;
+            border-bottom: 6px solid #e5e5e5;
+            width: 100%;
+            @include media(">=tablet") {
+                border-bottom: 9px solid #e5e5e5;
+            }
+        }
+    }
+    .holder-contact-form{
+        display: flex;
+        margin: 0 0px 70px;
+        flex-wrap: wrap;
+        @include media(">=tablet") {
+            margin: 0 -30px 50px;
+        }
+        @include media(">=desktop") {
+            margin: 0 -65px 100px;
+        }
+    }
+    .contact-form-content{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 31px;
+        @include media(">=tablet") {
+            padding: 0 30px;
+            width: 53%;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        @include media(">=desktop") {
+            padding: 0 65px;
+        }
+        .contact-form-title{
+            color: #333333;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 35px;
+            margin-bottom: 39px;
+            @include media(">=tablet") {
+                font-size: 30px;
+                line-height: 40px;
+                margin-bottom: 30px;
+            }
+        }
+        .contact-form-text{
+            color: #808080;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            @include media(">=tablet") {
+                line-height: 30px;
+                font-size: 18px;
+            }
+        }
+    }
+    .contact-form{
+        width: 100%;
+        padding: 0 23px;
+        background-color: transparent;
+        @include media(">=tablet") {
+            padding: 0 30px;
+            width: 47%;
+        }
+        @include media(">=desktop") {
+            padding: 0 65px;
+        }
+        .wpcf7{
+            .double-inputs{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -10px;
+                label{
+                    padding:0 10px;
+                    width: 50%;
+                    margin-bottom: 33px;
+                    @include media(">=tablet") {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+            label{
+                position: relative;
+                display: block;
+                margin-bottom: 33px;
+                @include media(">=tablet") {
+                    margin-bottom: 50px;
+                }
+                &:last-child{
+                    margin-bottom: 25px;
+                }
+                .wpcf7-form-control-wrap{
+                    input,
+                    select,
+                    textarea{
+                        @extend %transition;
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid rgba(#666666, 0.3);
+                        color: #a1a1a1;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        outline: none;
+                        padding: 0 30px 13px 0;
+                        background-color: transparent;
+                        @include media(">=tablet") {
+                            font-size: 16px;
+                            padding: 0 30px 25px 0;
+                        }
+                        @include placeholder {
+                            color: #a1a1a1;
+                        }
+                        &::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+                        &::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+                        &:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+                        &:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+                        &:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+                        &:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+                        &:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+                        &:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+                        &:focus{
+                            border-color: #2f3f92;
+                            outline: none;
+                            color: #2f3f92;
+                        }
+                    }
+                    textarea{
+                        height: 75px;
+                        resize: none;
+                    }
+                }
+                select{
+                    -webkit-appearance: none; 
+                    -moz-appearance: none; 
+                    appearance: none; 
+                    background-image: url(./images/chevron-down-gray.svg);
+                    background-size: 20px 15px;
+                    background-repeat: no-repeat ;
+                    background-position: 100% 19%;
+                }
+                &.active-focus{
+                    select{
+                        background-image: url(./images/chevron-down-blue.svg);
+                    }
+                }
+                .wpcf7-not-valid-tip{
+                    margin-top: 15px;
+                }
+            }
+            .holder-btn-submit{
+                text-align: center;
+                display: block;
+                @include media(">=tablet") {
+                    text-align: right;
+                }
+                .btn-submit{
+                    position: relative;
+                    @extend %transition;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 21px;
+                    color: #444444;
+                    padding: 0;
+                    border:none;
+                    background-color: transparent;
+                    text-transform: uppercase;
+                    outline: none;
+                    @include media(">=tablet") {
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                    &:before{
+                        content: '';
+                        @extend %transition;
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 3px;
+                        background-color: #666666;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom:-10px;
+                    }
+                    &:hover{
+                        color: #2f3f92;
+                        &:before{
+                            background-color: #2f3f92;
+                        }
+                    }
+                    i{
+                        margin-left: 10px;
+                    }
+                }
+                .ajax-loader{
+                    display: none;
+                }
+            }
+            .holder-bottom-form{
+                display: flex;
+                // align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                label{
+                    margin-bottom: 0;
+                }
+                .wpcf7-form-control-wrap{
+                    width: 100%;
+                    margin-right: 20px;
+                    margin-bottom: 25px;
+                    max-width: 140px;
+                    @include media(">=phone") {
+                        max-width: 290px;
+                    }
+                    @include media(">=tablet") {
+                        max-width: 65%;
+                    }
+                    .wpcf7-list-item{
+                        margin: 0;
+                    }
+                    .wpcf7-checkbox{
+                        margin-bottom: 0;
+                        text-align: left;
+                        .wpcf7-list-item-label{
+                            align-items: center;
+                        }
+                    }
+                }
+                .holder-btn-submit{
+                    margin-bottom: 25px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+.contact-details{
+    padding: 45px 0 50px;
+    max-width: 230px;
+    text-align: center;
+    margin: 0 auto;
+    @include media(">=tablet") {
+        max-width: 100%;
+        text-align: left;
+    }
+    .contact-details-holder{
+        display: flex;
+        justify-content: space-between;
+        color: #2a2d2e;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+        flex-wrap: wrap;
+        @include media(">=tablet") {
+            margin:  0 -20px;
+        }
+        @include media(">=desktop") {
+            font-size: 18px;
+            line-height: 29px;
+            margin:  0 -50px;
+        }
+        .title{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 19px;
+            letter-spacing: -0.29px;
+            @include media(">=desktop") {
+                font-size: 30px;
+                font-weight: 500;
+                margin-bottom: 29px;
+                letter-spacing: -1.5px;
+            }
+        }
+        .contact-details-head{
+            width:100%;
+            color: #2a2d2e;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            @include media(">=tablet") {
+                font-size: 18px;
+                padding: 0 20px;
+                width:33.33%;
+            }
+            @include media(">=desktop") {
+                padding: 0 50px;
+            }
+            .subtitle{
+                font-weight: 700;
+                margin-bottom: 2px;
+            }
+            a{
+                @extend %transition;
+                color: #2a2d2e;
+                &:hover{
+                    color: $cyan;
+                }
+            } 
+        }
+        .contact-location{
+            width:100%;
+            margin-bottom: 35px;
+            @include media(">=tablet") {
+                padding: 0 20px;
+                width:33.33%;
+            }
+            @include media(">=desktop") {
+            padding: 0 50px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            ul{
+                @extend %listreset;
+                li{
+                    display: flex;
+                    justify-content: center;
+                    @include media(">=tablet") {
+                        justify-content: flex-start;
+                    }
+                    .contact-item-title{
+                        font-weight: 700;
+                        margin-right: 7px;
+                    }
+                    a{
+                        color: #2a2d2e;
+                        &:hover{
+                            color: $cyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.map{
+    min-height: 601px;
+    .gm-style .gm-style-iw-c{
+        max-width: 300px !important;
+        width: 100%;
+        border-radius: 0px;
+        padding: 23px 33px ;
+        color: #2a2d2e;
+        font-size: 14px;
+        font-weight: 400;
+        overflow: visible;
+        line-height: 20px;
+        &:before{
+            width: 2px;
+            background: #005a60;
+            transform: none;
+            box-shadow: none;
+            top: -60px;
+            content: "";
+            height: 60px;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, 0%);
+        }
+    }
+    .gm-style .gm-style-iw-t::after{
+        display: none;
+    }
+    .content-popup{
+        max-width: 180px;
+        h3{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        a{
+            @extend %transition;
+            color: #2a2d2e;
+            font-size: 16px;
+            &:hover{
+                color: $cyan;
+            }
+        }
+        p{
+            margin: 0px 0 7px;
+        }
+        b{
+            font-size: 16px;
+        }
+    }
+    .gm-ui-hover-effect{
+        display: none !important;
+    }
+}

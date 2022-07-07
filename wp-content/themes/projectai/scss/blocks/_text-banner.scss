@@ -1,0 +1,20 @@
+.text-banner{
+    padding: 70px 0 70px;
+    @include media(">=tablet") {
+        padding: 132px 0 139px;
+    }
+    .container{
+        max-width: 832px;
+    }
+    .text-banner-text{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 35px;
+        letter-spacing: -0.8px;
+        @include media(">=tablet") {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+}

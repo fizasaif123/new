@@ -1,0 +1,113 @@
+.info-cards{
+    margin-bottom: 40px;
+    @include media(">=tablet") {
+        margin-bottom: 29px;
+    }
+    .container{
+        padding: 0px 47px;
+        @include media(">=tablet") {
+            padding: 0 15px;
+        }
+    }
+    .info-cards-list{
+        .info-card{
+            display: flex;
+            margin: 0 -25px;
+            flex-wrap: wrap;
+            position: relative;
+            padding-bottom: 64px;
+            padding-top: 55px;
+            @include media(">=tablet") {
+                padding-bottom: 73px;
+                padding-top: 55px;
+            }
+            &:first-child{
+                padding-top: 0;
+                @include media(">=tablet") {
+                    padding-top: 55px;
+                }
+            }
+            &:before{
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                background-color: $gray-700;
+                height: 8px;
+                width: 100%;
+                max-width: 457px;
+                position: absolute;
+                left: -82px;
+                bottom: 0px;
+                z-index: -1;
+                @include media(">=tablet") {
+                    height: 10px;
+                }
+            }
+            .info-card-image{
+                width: 100%;
+                padding: 0 25px;
+                @include media(">=tablet") {
+                    width: 38%;
+                }
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .info-card-content{
+                width: 100%;
+                padding: 0 25px;
+                text-align: center;
+                @include media(">=tablet") {
+                    width: 60%;
+                    text-align: left;
+                }
+                .info-card-title{
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $green;
+                    @include media(">=tablet") {
+                        font-size: 30px;
+                    }
+                }
+                .info-card-text{
+                    color: #222222;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    @include media(">=tablet") {
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+                    p{
+                        margin-bottom: 24px;
+                        @include media(">=tablet") {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2n){
+                @include media(">=tablet") {
+                    .info-card-image{
+                        order: -1;
+                        .holder-img{
+                            &:after{
+                                left: 24px;
+                            }
+                        }
+                    }
+                }
+                .holder-img:after{
+                    left: auto;
+                    right: -17px;
+                }
+            }
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }   
+}

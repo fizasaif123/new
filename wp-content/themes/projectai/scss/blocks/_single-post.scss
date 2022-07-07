@@ -1,0 +1,99 @@
+.navigation-single{
+	background-color: #005a60;
+	color: $white;
+    padding: 30px 0;
+    margin-bottom: 0;
+    margin-top: 24px;
+    @include media(">=tablet") {
+        padding: 55px 0 55px;
+    }
+    .holder-single-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .prev,
+    .next{
+        position: relative;
+        background: transparent;
+        max-width: 100%;
+        width: 100%;
+        @include media(">=phone") {
+            width: calc(48% - 90px);
+        }
+        a{
+            @extend %transition;
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 0;
+            display: inline-block;
+            @include media(">=tablet") {
+                font-size: 20px;
+            }
+            &:before{
+                position: absolute;
+                top: 0px;
+                @extend %transition;
+                display: inline-block;
+                vertical-align: middle;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300;
+                font-size: 20px;
+                margin-right: 4px;
+                @include media(">=tablet") {
+                    font-size: 45px;
+                }
+            }
+        }
+        .title-step{
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .title-post{
+
+        }
+    }
+    .prev{
+        text-align: left;
+        margin-left: 40px;
+        @include media(">=tablet") {
+            margin-left: 90px;
+        }
+        a:before{
+            left: -40px;
+            content: '\f060';
+            @include media(">=tablet") {
+                left: -90px;
+            }
+        }
+    }
+    .next{
+        text-align: right;
+        margin-right: 40px;
+        margin-bottom: 30px;
+        @include media(">=phone") {
+            margin-bottom: 0;
+        }
+        @include media(">=tablet") {
+            margin-right: 90px;
+        }
+        a:before{
+            right: -40px;
+            content: '\f061';
+            @include media(">=tablet") {
+                right: -90px;
+            }
+        }
+    }
+}
+.post-single-content{
+    margin: 60px 15px 0;
+    @include media(">=tablet") {
+        margin: 120px 15px 0;
+    }
+}
